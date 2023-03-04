@@ -1,0 +1,1 @@
+Este repositório foi criado com o objetivo de atender ao último desafio do Bootcamp da DIO Linux do Zero, que consiste em criar uma cluster com Docker Swarm para um balanceamento de carga, a fim de evitar sobrecarga das instâncias.
