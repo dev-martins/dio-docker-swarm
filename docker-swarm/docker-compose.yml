@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  docker-swarm:
+    build:
+      context: "."
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - target: 80
+        published: "8081-8084"
+    deploy:
+      replicas: 3
+    restart: unless-stopped
+    volumes:
+      - .:/var/www/html
+    networks:
+        - docker
+networks:
+  docker:
+    driver: bridge
